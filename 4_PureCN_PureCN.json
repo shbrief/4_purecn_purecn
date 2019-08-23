@@ -1,0 +1,14 @@
+{
+  "runPureCN.PureCN.normalDB": "File",
+  "runPureCN.PureCN.var_calls": "File",
+  "runPureCN.PureCN.var_calls_idx": "File",
+  "runPureCN.PureCN.intervalWeight": "File",
+  "runPureCN.PureCN.out_dir": "String",
+  "runPureCN.PureCN.snpblacklist": "File",
+  "runPureCN.PureCN.genome": "String",
+  "runPureCN.PureCN.mappingBiase": "File",
+  "runPureCN.PureCN.interval": "File",
+  "runPureCN.PureCN.tumor_loess": "File",
+  "runPureCN.PureCN.var_calls_stats": "File"
+}
+
