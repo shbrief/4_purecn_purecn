@@ -17,17 +17,17 @@ task PureCN {
 	File intervalWeight
 	File interval   # _gcgene.txt
 	
-	File snpblacklist # hg38_simpleRepeats.bed
+	File snpblacklist 
 	String out_dir
 	String genome
 	
-	String SAMPLEID = sub(basename(tumor_loess), "_coverage_loess.txt", "")
+	String SAMPLEID = basename(tumor_loess)
 
 	command <<<
 		Rscript /usr/local/lib/R/site-library/PureCN/extdata/PureCN.R \
         --out ${out_dir} \
         --tumor ${tumor_loess}} \
-        --SAMPLEID ${SAMPLEID} \
+        --SAMPLEID sub(${SAMPLEID}, "_coverage_loess.txt", "") \
         --vcf ${var_calls} \
         --statsfile ${var_calls_stats} \
         --normaldb ${normalDB} \
