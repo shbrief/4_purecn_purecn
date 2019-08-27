@@ -21,13 +21,13 @@ task PureCN {
 	String out_dir
 	String genome
 	
-	String SAMPLEID = basename(tumor_loess)
+	String SAMPLEID = basename(tumor_loess, "_coverage_loess.txt")
 
 	command <<<
 		Rscript /usr/local/lib/R/site-library/PureCN/extdata/PureCN.R \
         --out ${out_dir} \
         --tumor ${tumor_loess}} \
-        --SAMPLEID sub(${SAMPLEID}, "_coverage_loess.txt", "") \
+        --SAMPLEID ${SAMPLEID} \
         --vcf ${var_calls} \
         --statsfile ${var_calls_stats} \
         --normaldb ${normalDB} \
