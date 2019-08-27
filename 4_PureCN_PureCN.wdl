@@ -26,7 +26,7 @@ task PureCN {
 
 	command <<<
 		Rscript /usr/local/lib/R/site-library/PureCN/extdata/PureCN.R \
-        --out ${out_dir} \
+        --out ${out_dir}/${SAMPLEID} \
         --tumor ${tumor_loess} \
         --sampleid ${SAMPLEID} \
         --vcf ${var_calls} \
