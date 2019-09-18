@@ -47,16 +47,6 @@ task PureCN {
 	}
 	
 	output {
-		File chromosome_pdf = "${SAMPLEID}_chromosomes.pdf"
-        File csv = "${SAMPLEID}.csv"
-        File dnacoy_seg = "${SAMPLEID}_dnacopy.seg"
-        File genes_csv = "${SAMPLEID}_genes.csv"
-        File local_optima_pdf = "${SAMPLEID}_local_optima.pdf"
-        File log = "${SAMPLEID}.log"
-        File loh_csv = "${SAMPLEID}_loh.csv"
-        File pdf = "${SAMPLEID}.pdf"
         File res = "${SAMPLEID}.rds"
-        File segmentation_pdf = "${SAMPLEID}_segmentation.pdf"
-        File variants_csv = "${SAMPLEID}_variants.csv"
 	}
 }
